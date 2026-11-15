@@ -1,0 +1,27 @@
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+
+PASS Space action starts a native CharacterBody2D jump
+PASS Player lands on native StaticBody2D floor
+PASS Ducking reduces the collision shape to 24 pixels
+PASS Releasing duck restores the normal collision shape
+PASS Airborne down action performs fast-fall
+PASS Landing resets an unfinished combo
+PASS Five real stomps activate Star at difficulty time 0.0
+PASS Five real stomps activate Star at difficulty time 60.0
+PASS Five real stomps activate Star at difficulty time 220.0
+PASS Super Star smashes a piranha pipe
+PASS Super Star doubles world speed
+PASS Super Star ends after six seconds
+PASS A normal pipe collision ends the run
+PASS High fire collision respects duck = false
+PASS High fire collision respects duck = true
+PASS Coins collect and add ten points
+PASS Boss threshold triggers at 1,000 and advances to 2,000
+PASS Boss remains active for the first 11.99 seconds
+PASS Boss retreats at twelve seconds and rewards 250 points
+PASS Pause stops the gameplay state
+PASS Resume restores the gameplay state
+PASS Help pauses an active run
+PASS Closing help resumes the active run
+PASS Native ConfigFile persists score and coin totals
+RESULT: 24/24 checks passed

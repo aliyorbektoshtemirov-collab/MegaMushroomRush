@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3]
+[ext_resource type="Script" path="res://scripts/enemy.gd" id="1"]
+[sub_resource type="RectangleShape2D" id="EnemyBox"]
+size = Vector2(34, 32)
+[node name="Enemy" type="Area2D"]
+script = ExtResource("1")
+collision_layer = 4
+collision_mask = 0
+monitoring = false
+monitorable = false
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(17, 16)
+shape = SubResource("EnemyBox")

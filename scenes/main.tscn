@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://5rvsuool0kc8"]
+
+[ext_resource type="Script" uid="uid://otsssl6ls2ta" path="res://scripts/main.gd" id="1"]
+[ext_resource type="Script" uid="uid://b7tufy8lkopck" path="res://scripts/background.gd" id="2"]
+[ext_resource type="PackedScene" path="res://scenes/player.tscn" id="3"]
+[ext_resource type="PackedScene" path="res://scenes/boss.tscn" id="4"]
+[ext_resource type="Script" uid="uid://belfqaj6lo8ef" path="res://scripts/coins.gd" id="5"]
+[ext_resource type="Script" uid="uid://c122ceens0wo6" path="res://scripts/effects.gd" id="6"]
+[ext_resource type="Script" uid="uid://dkjh44rdh4ptq" path="res://scripts/audio.gd" id="7"]
+[ext_resource type="PackedScene" path="res://scenes/hud.tscn" id="8"]
+
+[sub_resource type="RectangleShape2D" id="Floor"]
+size = Vector2(4000, 400)
+
+[node name="MegaMushroomRush" type="Node2D" unique_id=1924347335]
+script = ExtResource("1")
+
+[node name="Background" type="Node2D" parent="." unique_id=1247725567]
+z_index = -10
+script = ExtResource("2")
+
+[node name="Ground" type="StaticBody2D" parent="." unique_id=763721686]
+position = Vector2(1000, 648)
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground" unique_id=843791410]
+shape = SubResource("Floor")
+
+[node name="MechaBoss" parent="." unique_id=145406681 instance=ExtResource("4")]
+
+[node name="Actors" type="Node2D" parent="." unique_id=80406175]
+
+[node name="Coins" type="Node2D" parent="." unique_id=1572191319]
+z_index = 1
+script = ExtResource("5")
+
+[node name="Player" parent="." unique_id=889091509 instance=ExtResource("3")]
+z_index = 2
+
+[node name="Effects" type="Node2D" parent="." unique_id=31101731]
+z_index = 3
+script = ExtResource("6")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=361355327]
+position = Vector2(480, 300)
+
+[node name="Sound" type="Node" parent="." unique_id=878524437]
+script = ExtResource("7")
+
+[node name="HUD" parent="." unique_id=1317348904 instance=ExtResource("8")]
